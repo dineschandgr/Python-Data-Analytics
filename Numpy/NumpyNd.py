@@ -7,6 +7,7 @@ b = np.array([1, 2, 3, 4, 5])
 c = np.array([[1, 2, 3], [4, 5, 6]])
 d = np.array([[[1, 2, 3], [4, 5, 6]], [[1, 2, 3], [4, 5, 6]]])
 e = np.array([1, 2, 3, 4], ndmin=5)
+print("5d array values ", e)
 
 print(a.ndim)
 print(b.ndim)
@@ -114,7 +115,7 @@ for x in arr:
 
 arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
 for x in np.nditer(arr):
-  print(x)
+  print("nditer " ,x)
 
 #joins
 
@@ -126,4 +127,20 @@ print(arr)
 arr1 = np.array([[1, 2], [3, 4]])
 arr2 = np.array([[5, 6], [7, 8]])
 arr = np.concatenate((arr1, arr2), axis=0)
-print(arr)
+print("axis 0 ",arr)
+
+arr = np.concatenate((arr1, arr2), axis=1)
+print("axis 1 ",arr)
+
+##stack
+
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+arr = np.stack((arr1, arr2), axis=1)
+print("stack ",arr)
+arr = np.hstack((arr1, arr2))
+print("hstack ",arr)
+arr = np.vstack((arr1, arr2))
+print("vstack ",arr)
+arr = np.dstack((arr1, arr2))
+print("dstack ",arr)
