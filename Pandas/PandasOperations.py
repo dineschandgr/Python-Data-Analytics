@@ -38,3 +38,6 @@ data = {
 df = pd.DataFrame(data)
 
 print(df)
+
+df = pd.read_json('data.json')
+print(df)

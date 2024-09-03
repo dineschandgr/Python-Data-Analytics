@@ -14,7 +14,7 @@ myvar = pd.Series(a)
 print(myvar)
 
 myvar = pd.Series(a, index = ["x", "y", "z"])
-print("labels ",myvar)
+print("labels \n",myvar)
 print(myvar['x'])
 
 calories = {"day1": 420, "day2": 380, "day3": 390}

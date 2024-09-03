@@ -5,6 +5,7 @@ df = pd.read_csv('data.csv')
 pd.options.display.max_rows = 9999
 new_df = df.dropna()
 print(new_df.to_string())
+print(new_df.info())
 df.dropna(inplace = True)
 print("original frame \n",df)
 
