@@ -36,3 +36,4 @@ for x in df.index:
     df.loc[x, "Duration"] = 120
 
 print("date \n",df.to_string())
+

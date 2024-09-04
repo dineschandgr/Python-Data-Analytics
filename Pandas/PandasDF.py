@@ -23,9 +23,13 @@ print("csv data \n", df)
 #to print all rows
 print("csv data \n", df.to_string())
 
-
+df = pd.read_csv('data.csv')
 #analyze data
 print(df.head(10))
 print(df.tail(11))
-print(df.info())
+print("before ",df.info())
 
+print(df.duplicated())
+df.drop_duplicates(inplace = True)
+print("after removing duplicate \n",df.to_string())
+print("after ",df.info())
