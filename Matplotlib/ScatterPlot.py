@@ -8,3 +8,7 @@ colors = np.array(["red","green","blue","yellow","pink","black","orange","purple
 plt.scatter(x, y, c=colors)
 
 plt.show()
+
+
+if name == 'main':
+    main()

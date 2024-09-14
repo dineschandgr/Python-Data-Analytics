@@ -24,6 +24,7 @@ print("csv data \n", df)
 print("csv data \n", df.to_string())
 
 df = pd.read_csv('data.csv')
+
 #analyze data
 print(df.head(10))
 print(df.tail(11))
