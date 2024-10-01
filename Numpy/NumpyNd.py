@@ -41,6 +41,8 @@ print(arr[::2])
 #Slicing 2D Array
 arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10],  [11, 12, 13, 14, 15]])
 print(arr[1, 1:4])
+
+#to check
 print("arr 2d Slice", arr[0:3, 1])
 print("arr 2d Slice flatten", arr[0:3, 1:3])
 
@@ -51,7 +53,7 @@ arr = np.array(['apple', 'banana', 'cherry'])
 print("type ",arr.dtype)
 
 arr = np.array([1, 2, 3, 4], dtype='S')
-print(arr)
+print("arr ",arr)
 print(arr.dtype)
 arr = np.array([1, 2, 3, 4], dtype='i4')
 print(arr)
@@ -60,23 +62,22 @@ print(arr.dtype)
 arr = np.array([1.1, 2.1, 3.1])
 newarr = arr.astype('i')
 newarr = arr.astype(int)
-print(newarr)
-print(newarr.dtype)
+print("newarr ",newarr)
+print("newarr type ",newarr.dtype)
 
 #Copy and View
 
 arr = np.array([1, 2, 3, 4, 5])
 x = arr.copy()
 arr[0] = 42
-print(arr)
-print(x)
-
+print("original array ",arr)
+print("copy array ",x)
 
 arr = np.array([1, 2, 3, 4, 5])
 y = arr.view()
 arr[0] = 42
-print(arr)
-print(y)
+print("original array ",arr)
+print("view array ",y)
 
 print(x.base)
 print(y.base)
@@ -91,9 +92,11 @@ print('shape of array :', arr.shape)
 #Reshape
 arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
 newarr = arr.reshape(4, 3)
-print(newarr)
+print("reshape 1 ",newarr)
 newarr = arr.reshape(2, 3, 2)
-print(newarr)
+print("reshape 2 ",newarr)
+print("reshape index 1 ",newarr[0,0,0])
+print("reshape index 2 ",newarr[1,0,0])
 
 #iteration
 arr = np.array([[1, 2, 3], [4, 5, 6]])
@@ -106,6 +109,7 @@ for x in arr:
 
 arr = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
 for x in arr:
+  print("1d ", x)
   for y in x:
     print("2d " ,y)
     for z in y:
