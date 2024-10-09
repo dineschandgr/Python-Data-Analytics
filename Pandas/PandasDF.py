@@ -28,9 +28,10 @@ df = pd.read_csv('data.csv')
 #analyze data
 print(df.head(10))
 print(df.tail(11))
+print("after tail --------------------------")
 print("before ",df.info())
 
-print(df.duplicated())
+print("duplicated ",df.duplicated())
 df.drop_duplicates(inplace = True)
 print("after removing duplicate \n",df.to_string())
 print("after ",df.info())
