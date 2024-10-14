@@ -1,0 +1,17 @@
+{
+    "fileLocations": [
+        {
+            "URIs": [
+                "https://ap-south-1.console.aws.amazon.com/s3/object/oct8-athena?region=ap-south-1&bucketType=general&prefix=file/athena.csv",
+                "uri2",
+                "uri3"
+            ]
+        }
+    ],
+    "globalUploadSettings": {
+        "format": "JSON",
+        "delimiter": ",",
+        "textqualifier": "'",
+        "containsHeader": "true"
+    }
+}
